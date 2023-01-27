@@ -1,0 +1,563 @@
+body{
+  background-color: rgb(255, 255, 255);
+  height: 3000;
+}
+
+
+
+.row1 {
+  background-image: 
+  linear-gradient(to bottom right, rgba(128,0,128,0.4), rgba(0, 0, 255, 0.4)),
+  url(img/header.jpeg);
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  margin: 100px;
+  height: calc(100%/16*4 - 20px);
+  padding: 2%;
+}
+
+.h1 {
+  text-align: center;
+  height: calc((100% - 10px)/3 * 2);
+  width: calc(100% - 10px);
+  color: white;
+  margin-bottom: 5px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  padding-top: 30px;
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+
+@keyframes slidein {
+  from {
+      margin-left: 100%;
+  }
+}
+
+.h2 {
+  text-align: center;
+  height: calc((100% - 10px)/3);
+  width: calc(100% - 10px);
+  margin-top: 5px;
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+  padding-bottom: 30px;
+}
+
+
+
+.hdr-title {
+  text-align: center;
+  font-size: 130px;
+  margin: 10px;
+  line-height: 150px;
+}
+
+.hdr-text {
+  text-align: center;
+  font-size: 50px;
+  margin: 10px;
+  line-height: 90px;
+}
+
+
+
+.hdr-btn {
+  background-color: rgb(255, 255, 255);
+  height: calc(100%/2);
+  width: 30%;
+  font-size: 30px;
+  border-radius: 50px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-decoration: none;
+  padding: 1%;
+}
+
+
+.hdr-btn:hover {
+  background-color: #ade2f8;
+  font-size: 40px;
+  color: #00035d;
+}
+
+.hdr-btn:active {
+  background-color: #ade2f8;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.row2 {
+  background-image:
+  linear-gradient(to bottom right, rgba(128,0,128,0.4), rgba(0, 0, 255, 0.4), rgba(0,128,0,0.4)),
+  url(img/Background.jpg);
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  margin: 100px;
+  height: calc(100%/16*4 - 20px);
+  padding: 8%;
+  display: flex;
+}
+
+.l {
+  background: rgb(255, 255, 255);
+  height: 95%;
+  opacity: 0.8;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  margin: 1%;
+  width: calc(90%/4);
+  font-family: "Lucida Console", "Courier New", monospace;
+  border-radius: 20px;
+}
+
+.l:hover {
+  background-color: #ade2f8;
+  box-shadow: 0 5px rgb(43, 43, 43);
+  transform: translateY(10px);
+  color: #00035d;
+}
+
+.lImg {
+  width: calc(100%/3);
+  height: calc(100%/4);
+}
+
+.lImg:hover {
+  cursor: default;
+  transform: rotate(360deg);
+  transition: 0.3s ease-in-out 0s;
+}
+
+
+.lP {
+  padding: 7%;
+  padding-top: 10%;
+  font-size: 25px;
+  line-height: 50px;
+  word-wrap: break-word;
+  white-space: inherit;
+}
+
+.row3 {
+  background-image: url("img/book.webp");
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  margin: 100px;
+  height: calc(100%/16*6 - 20px);
+}
+
+
+.bookTitle {
+  height: calc(100%/8);
+  font-size: 70px;
+  padding: 1%;
+}
+
+.bookTitle:hover {
+  color: #00035d;
+  font-size: 90px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.books {
+  text-align: center;
+  height: 80%;
+  display: flex;
+  padding-left: 10%;
+}
+
+.b {
+  color: black;
+  font-family: "Lucida Console", "Courier New", monospace;
+  background: rgb(255, 255, 255);
+  text-align: center;
+  height: 95%;
+  width: calc(100%/4);
+  margin-left: 3%;
+  margin-right: 2%;
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.bImg {
+  width: 100%;
+  height: calc(100%/2);
+}
+
+
+.bP {
+  padding: 5%;
+  margin: 30px;
+  font-size: 30px;
+  line-height: 60px;
+  word-wrap: break-word;
+}
+
+
+/* This container is needed to position the front and back side */
+.b-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.b:hover .b-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.b-front, .b-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.b-front {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+/* Style the back side */
+.b-back {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  transform: rotateY(180deg);
+  font-size: 40px;
+}
+
+
+.buy-btn {
+  width: 30%;
+  font-size: 40px;
+  background-color: #00035d;
+  color: white;
+}
+
+
+
+
+
+
+.row4 {
+  background: rgb(62, 61, 61);
+  text-align: center;
+  margin: 100px;
+  height: calc(100%/16*2 - 20px);
+  display: flex;
+  padding-top: 5%;
+}
+
+.f {
+  text-align: center;
+  width: calc(100%/2);
+  color: white;
+  margin-top:4%;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.link {
+  border: 5px solid black;
+  border-radius: 20px;
+  font-size: 30px;
+  padding: 1%;
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {background-color: #0007d1}
+
+.link:active {
+  background-color: #0007d1;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.fP {
+  font-size: 25px;
+  line-height: 35px;
+  word-wrap: break-word;
+  white-space: inherit;
+}
+
+ 
+
+
+
+
+.button {
+  padding: 10px;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  width: 30%;
+  font-size: 40px;
+  background-color: #00035d;
+  color: white;
+}
+.button:hover {
+  background: #069dd8;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(10, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  left: 20%;
+  top: 25%;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  width: 60%;
+  height: 50%;
+  position: relative;
+  padding: 1%;
+  display: flex;
+}
+
+
+.pop-img {
+  margin-right: 1%;
+  width: calc(100%/4);
+  height: calc(100%-10px);
+  border-radius: 20px;
+}
+
+.book-img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.book-info {
+  background-color: #ffffff;
+  width: calc(100%/4*3);
+  height: calc(100%-10px);
+  /*border: 5px solid black;*/
+  font-family: "Lucida Console", "Courier New", monospace;
+  border-radius: 20px;
+  padding: 1%;
+}
+
+
+.pop-h1 {
+  text-align: center;
+  color: #1900ff;
+  font-size:60px;
+  padding: 1%;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.pop-h2 {
+  text-align: center;
+  color: #333;
+  font-size: 35px;
+  padding: 1%;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.book-content {
+  margin-bottom: 1%;
+  padding: 1%;
+  display: flex;
+  font-family: "Lucida Console", "Courier New", monospace;
+  word-wrap: break-word;
+  white-space: inherit;
+  line-height: 50px;
+}
+
+.content1 {
+  font-size: 25px;
+  margin-right: 1%;
+}
+
+.content2 {
+  font-size: 25px;
+}
+
+.book-btn {
+  margin-top: 3%;
+  height: calc(100%/8);
+  font-size: 30px;
+  border-radius: 20px;
+  padding: 1%;
+  width: 20%;
+  bottom: 0;
+  left: 0;
+  position: relative;
+  text-decoration: none;
+  background-color: #00035d;
+  color: white;
+  border: 5px solid rgb(60, 27, 248);
+}
+
+
+.book-btn:hover {
+  border: 5px solid rgb(60, 27, 248);
+  background-color: white;
+  color: #00035d;
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid black;
+}
+.popup .close:hover {
+  color: #1540ff;
+}
+
+
+
+
+
+.menubar{
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, rgba(128,0,128,1), rgba(0, 0, 255, 1));
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  transition: 0.3s all ease-in-out;
+  visibility: hidden;
+  z-index: 1000;
+  top:0; 
+}
+
+
+.menuclose {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  border: 5px solid black;
+  color: #ffffff;
+}
+
+
+.closeimg {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  border: 5px solid black;
+  color: #ffffff;
+}
+
+
+.menulist {
+  height: 60%;
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+
+.menu-item{
+  width: 30%;
+  height: calc(100%/4);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-right: 35%;
+  margin-left: 35%;
+  padding-left: 8%;
+}
+
+
+.item-link {
+  font-size: 60px;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item a:hover{
+  color: rgb(14, 19, 114);
+  background-color: rgb(253, 228, 255);
+  font-size: 70px;
+}
+
+
+
+.menu{
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: rgb(95, 95, 255);
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+}
+
+
+.menuimg {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+}
+
+
+.menu:hover{
+  background-color: #06D85F;
+}
+
+
+.menubar:target{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
